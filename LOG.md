@@ -43,6 +43,8 @@ Se agrega lint, format y test.
 
 format: npm install --save-dev prettier
 lint: npm install --save-dev @eslint/js typescript-eslint eslint-config-prettier
+test: npm install --save-dev vitest jsdom @vitest/coverage-v8
+test-lint: npm install --save-dev @open-wc/testing
 
 Date: Noviembre 8 2025
 Branch: ci/workflows
