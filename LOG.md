@@ -41,5 +41,8 @@ Se generan los workflows para el CI.
 
 Se agrega lint, format y test.
 
+format: npm install --save-dev prettier
+lint: npm install --save-dev @eslint/js typescript-eslint eslint-config-prettier
+
 Date: Noviembre 8 2025
 Branch: ci/workflows

@@ -6,14 +6,21 @@
     "dev": "webpack serve",
     "build": "webpack --mode production",
     "format": "prettier --write \"src/**/*.{ts,js,scss,html,css,json,md}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,js,scss,html,css,json,md}\""
+    "format:check": "prettier --check \"src/**/*.{ts,js,scss,html,css,json,md}\"",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
     "css-loader": "^7.1.2",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
     "html-webpack-plugin": "^5.6.4",
     "mini-css-extract-plugin": "^2.9.4",
     "prettier": "^3.6.2",
@@ -22,6 +29,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
