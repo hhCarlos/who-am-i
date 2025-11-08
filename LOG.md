@@ -35,3 +35,11 @@ lit: npm install lit
 
 Date: Noviembre 8 2025
 Branch: feat/lit-header-component
+
+## 3. Git Workflows
+Se generan los workflows para el CI.
+
+Se agrega lint, format y test.
+
+Date: Noviembre 8 2025
+Branch: ci/workflows
