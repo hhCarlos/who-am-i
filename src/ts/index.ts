@@ -1,12 +1,13 @@
 import '../styles/main.scss';
+import './components/header/component';
 
 console.log('🚀 Who Am I – Build listo y funcionando con HMR');
 
 const app = document.getElementById('app');
 if (app) {
   app.innerHTML = `
-    <h1>Who Am I</h1>
-    <p>Bienvenido a mi espacio digital ⚡</p>
+    <app-header></app-header>
+    Texto de prueba...
   `;
 }
 

@@ -31,5 +31,7 @@ Branch: feat/base-proyecto-init
 ## 2. Lit: Primer componente
 Se agrega la libreria de lit para generar componentes y se genera el primer componente: Header.
 
+lit: npm install lit
+
 Date: Noviembre 8 2025
 Branch: feat/lit-header-component
