@@ -27,3 +27,9 @@ Se agregan los script para correr el proyecto y hacer build a traves de webpack.
 
 Date: Noviembre 8 2025
 Branch: feat/base-proyecto-init
+
+## 2. Lit: Primer componente
+Se agrega la libreria de lit para generar componentes y se genera el primer componente: Header.
+
+Date: Noviembre 8 2025
+Branch: feat/lit-header-component
