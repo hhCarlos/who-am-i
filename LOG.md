@@ -52,5 +52,7 @@ run-all: npm install --save-dev npm-run-all
 se agrega comando para correr format, lint y test en el package.json:
 "verifier": "run-p format:check lint test"
 
+Se agregan los workflows para correr las herramientas integradas.
+
 Date: Noviembre 8 2025
 Branch: ci/workflows
