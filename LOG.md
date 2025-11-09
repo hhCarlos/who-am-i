@@ -60,6 +60,7 @@ Branch: ci/workflows
 ## 4. CI Git Workflows
 
 Se agrega el job para generar la pagina en github pages.
+Se agrega en el webpack la propiedad para hacer visible el path publico.
 
 Date: Noviembre 9 2025
 Branch: ci/workflows
