@@ -46,5 +46,11 @@ lint: npm install --save-dev @eslint/js typescript-eslint eslint-config-prettier
 test: npm install --save-dev vitest jsdom @vitest/coverage-v8
 test-lint: npm install --save-dev @open-wc/testing
 
+Se instala run-all para correrlos en paralelo:
+run-all: npm install --save-dev npm-run-all
+
+se agrega comando para correr format, lint y test en el package.json:
+"verifier": "run-p format:check lint test"
+
 Date: Noviembre 8 2025
 Branch: ci/workflows
