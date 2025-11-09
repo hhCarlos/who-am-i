@@ -19,4 +19,9 @@ jobs:
   build:
     uses: ./.github/workflows/build.yml
     needs: [lint, format, test]
+
+  deploy:
+    if: github.ref == 'refs/heads/develop'
+    uses: ./.github/workflows/deploy.yml
+    needs: [build]
   
