@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ci/**, develop]
+  pull_request:
+    branches: [ci/**, develop]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Verifier (format + lint + test)
+        run: npm run verifier
+
+      - name: Build project
+        run: npm run build
+
+      - name: Show build info
+        run: |
+          echo "✅ Build completed successfully"
+          du -sh dist/* || true
+          echo "🔹 Branch: $GITHUB_REF_NAME"
+          echo "🔹 Commit: $GITHUB_SHA"

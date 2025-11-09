@@ -9,7 +9,7 @@
     "format:check": "prettier --check \"src/**/*.{ts,js,scss,html,css,json,md}\"",
     "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "test:watch": "vitest",
     "verifier": "run-p format:check lint test"
   },
