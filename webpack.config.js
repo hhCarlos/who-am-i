@@ -35,6 +35,7 @@ export default {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+      publicPath: '/who-am-i/', // 👈 también aquí por si acaso
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.[contenthash].css',
