@@ -28,3 +28,7 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     needs: [build]
   
+  deploy-s3:
+    if: github.ref == 'refs/heads/develop'
+    uses: ./.github/workflows/deploy-s3.yml
+    needs: [build]

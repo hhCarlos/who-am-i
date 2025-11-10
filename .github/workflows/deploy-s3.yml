@@ -1,0 +1,45 @@
+name: Deploy to S3
+
+on:
+  workflow_call:  # 👈 Permite ser invocado desde ci.yml
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project 🏗️
+        run: npm run build
+
+      - name: Sync to S3 🪣
+        uses: aws-actions/s3-sync@v2
+        with:
+          args: --delete
+          bucket: who-am-i-site   # 👈 tu bucket exacto
+          region: us-east-1       # 👈 la región donde lo creaste
+          source-dir: ./dist
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Deployment info 🌐
+        run: |
+          echo "✅ Deployed from branch: $GITHUB_REF_NAME"
+          echo "🔹 Commit: $GITHUB_SHA"
+          echo "🔗 S3 URL: http://who-am-i-site.s3-website-us-east-1.amazonaws.com"
