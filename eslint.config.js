@@ -11,7 +11,7 @@ export default [
   ...tseslint.configs.recommended,
   prettier,
   {
-    files: ['src/**/*.{ts,js}'],
+    files: ['src/**/*.{ts,js}', '**/*.test.ts', '**/*.spec.ts'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
@@ -25,6 +25,7 @@ export default [
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
     },
   },
 ];

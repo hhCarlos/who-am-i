@@ -64,3 +64,10 @@ Se agrega en el webpack la propiedad para hacer visible el path publico.
 
 Date: Noviembre 9 2025
 Branch: ci/workflows
+
+## 5. Layouts: Three Block layout
+
+Se genera los layouts y el primer layout es 3 bloques.
+
+Date: Noviembre 9 2025
+Branch: feat/layouts-init
