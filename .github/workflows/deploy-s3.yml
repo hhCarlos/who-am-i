@@ -2,6 +2,11 @@ name: Deploy to S3
 
 on:
   workflow_call:
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
 
 permissions:
   contents: read
@@ -25,11 +30,6 @@ jobs:
 
       - name: Build project 🏗️
         run: npm run build
-
-      - name: Debug secrets presence
-        run: |
-          if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then echo "❌ Missing AWS_ACCESS_KEY_ID"; else echo "✅ AWS_ACCESS_KEY_ID found"; fi
-          if [ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]; then echo "❌ Missing AWS_SECRET_ACCESS_KEY"; else echo "✅ AWS_SECRET_ACCESS_KEY found"; fi
 
       - name: Configure AWS Credentials 🔐
         uses: aws-actions/configure-aws-credentials@v4
