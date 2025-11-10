@@ -12,7 +12,7 @@ export default {
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/who-am-i/',
+    publicPath: './',
     clean: true,
   },
   module: {
