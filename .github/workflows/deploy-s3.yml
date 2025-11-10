@@ -26,6 +26,11 @@ jobs:
       - name: Build project 🏗️
         run: npm run build
 
+      - name: Debug secrets presence
+        run: |
+          if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then echo "❌ Missing AWS_ACCESS_KEY_ID"; else echo "✅ AWS_ACCESS_KEY_ID found"; fi
+          if [ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]; then echo "❌ Missing AWS_SECRET_ACCESS_KEY"; else echo "✅ AWS_SECRET_ACCESS_KEY found"; fi
+
       - name: Configure AWS Credentials 🔐
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -42,7 +47,3 @@ jobs:
           echo "🔹 Commit: $GITHUB_SHA"
           echo "🔗 S3 URL: http://who-am-i-site.s3-website-us-east-1.amazonaws.com"
 
-      - name: Debug secrets presence
-        run: |
-          if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then echo "❌ Missing AWS_ACCESS_KEY_ID"; else echo "✅ AWS_ACCESS_KEY_ID found"; fi
-          if [ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]; then echo "❌ Missing AWS_SECRET_ACCESS_KEY"; else echo "✅ AWS_SECRET_ACCESS_KEY found"; fi
