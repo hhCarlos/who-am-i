@@ -26,3 +26,4 @@ jobs:
       - run: |
           echo "Deployed from branch: $GITHUB_REF_NAME"
           echo "Commit: $GITHUB_SHA"
+          echo "Site URL: https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/"
