@@ -4,11 +4,9 @@ import './components/footer/component';
 import './layouts/threeBlocks/component';
 import { Router } from './router/router';
 import './pages/home/component';
-
-// Siguientes --------------------------
-import './pages/projects/projects.page';
-import './pages/contact/contact.page';
-import './pages/about/about.page';
+import './pages/projects/component';
+import './pages/contact/component';
+import './pages/about/component';
 
 window.addEventListener('DOMContentLoaded', () => {
   const outlet = document.getElementById('app');

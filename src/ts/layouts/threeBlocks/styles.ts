@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export default css`
+export const styles = css`
   :host {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -18,5 +18,6 @@ export default css`
 
   main {
     padding: 1rem;
+    min-height: 90vh;
   }
 `;

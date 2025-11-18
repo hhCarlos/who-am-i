@@ -3,8 +3,8 @@ import { customElement } from 'lit/decorators.js';
 import { styles } from './styles';
 import { template } from './template';
 
-@customElement('three-blocks-layout')
-export class ThreeBlocksLayout extends LitElement {
+@customElement('about-page')
+export class AboutPage extends LitElement {
   static styles = [styles];
 
   render() {
