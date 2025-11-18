@@ -19,8 +19,6 @@ export class Router {
     const hash = window.location.hash || '';
     const pageTag = routes[hash] || 'home-page';
 
-    console.log('Pagina para renderizar => ', `<${pageTag}></${pageTag}>`, ' TAG: ', pageTag);
-
     this.root.innerHTML = `<${pageTag}></${pageTag}>`;
   }
 }
