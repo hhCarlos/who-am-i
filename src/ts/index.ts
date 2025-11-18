@@ -3,7 +3,9 @@ import './components/header/component';
 import './components/footer/component';
 import './layouts/threeBlocks/component';
 import { Router } from './router/router';
-import './pages/home/home.page';
+import './pages/home/component';
+
+// Siguientes --------------------------
 import './pages/projects/projects.page';
 import './pages/contact/contact.page';
 import './pages/about/about.page';
