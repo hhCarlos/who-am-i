@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "webpack serve --mode development --hot --watch",
     "build": "webpack --mode production",
+    "start": "npm run build; webpack serve;",
+    "reset": "rm -rf dist node_modules/.cache && npm run dev",
     "format": "prettier --write \"src/**/*.{ts,js,scss,html,css,json,md}\"",
     "format:check": "prettier --check \"src/**/*.{ts,js,scss,html,css,json,md}\"",
     "lint": "eslint . --max-warnings=0",

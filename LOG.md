@@ -58,7 +58,6 @@ Date: Noviembre 8 2025
 Branch: ci/workflows
 
 ## 4. CI Git Workflows
-
 Se agrega el job para generar la pagina en github pages.
 Se agrega en el webpack la propiedad para hacer visible el path publico.
 
@@ -66,8 +65,13 @@ Date: Noviembre 9 2025
 Branch: ci/workflows
 
 ## 5. Layouts: Three Block layout
-
 Se genera los layouts y el primer layout es 3 bloques.
 
 Date: Noviembre 9 2025
 Branch: feat/layouts-init
+
+## 6. General: Pages y Routes
+Se genera la estructura general para pages y para routes.
+
+Date: Noviembre 17 2025
+Branch: feat/pages-y-route

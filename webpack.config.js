@@ -19,7 +19,12 @@ export default {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: false
+          }
+        },
         exclude: /node_modules/,
       },
       {
@@ -34,17 +39,18 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.[contenthash].css',
     }),
   ],
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     open: true,
     hot: true,
-    watchFiles: ['src/**/*'],
+    watchFiles: ['src/**/*.{ts,js,scss,html}'],
     port: 3000,
   },
   mode: 'development',

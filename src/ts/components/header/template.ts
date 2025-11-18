@@ -7,7 +7,7 @@ export const template = () => html`
       <a href="#projects">Proyectos</a>
       <a href="#about">Sobre mí</a>
       <a href="#contact">Contacto</a>
-      <a href="#otro">Otro</a>
+      <a href="#galeria">Galeria</a>
     </nav>
   </header>
 `;
