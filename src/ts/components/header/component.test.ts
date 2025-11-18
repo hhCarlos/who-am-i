@@ -1,6 +1,6 @@
 import { fixture, html } from '@open-wc/testing';
 import { expect, describe, it } from 'vitest';
-import './component'; // importa tu AppHeader
+import './component';
 
 describe('<app-header>', () => {
   it('debería renderizar el título correctamente', async () => {
