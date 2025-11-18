@@ -1,0 +1,9 @@
+import '../styles/main.scss';
+import './components/header/component';
+import './components/footer/component';
+import './layouts/threeBlocks/component';
+import './pages/home/component';
+import './pages/projects/component';
+import './pages/contact/component';
+import './pages/about/component';
+//# sourceMappingURL=index.d.ts.map
