@@ -75,3 +75,16 @@ Se genera la estructura general para pages y para routes.
 
 Date: Noviembre 17 2025
 Branch: feat/pages-y-route
+
+## 7. General: Coherencia en la modularidad de componentes
+Coherencia en la modularidad de componentes, se genera en todos los componentes actuales el
+mismo tipo de modularidad el cual compondra cada componente, pagina o layout que exponga 
+un componente @componentLit los siguientes archivos.
+
+- component.ts
+- component.test.ts
+- styles.ts
+- template.ts
+
+Date: Noviembre 17 2025
+Branch: feat/coherencia-general
