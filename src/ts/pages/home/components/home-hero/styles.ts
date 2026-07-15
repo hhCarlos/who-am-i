@@ -17,6 +17,9 @@ export const styles = css`
 
     font-size: 4rem;
     line-height: 1.1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .home-hero__description {

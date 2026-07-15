@@ -2,7 +2,10 @@ import { html } from 'lit';
 
 export const template = () => html`
   <section class="page-section page-section--md home-hero">
-    <h2 class="home-hero__title">¡Bienvenidos!</h2>
+    <div class="home-hero__title">
+      <h2>¡Bienvenidos!</h2>
+      <app-icon name="default" size="mega"></app-icon>
+    </div>
 
     <p class="home-hero__description">
       Esta es una breve descripción de la sección de héroe.

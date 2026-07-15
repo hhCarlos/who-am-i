@@ -6,6 +6,7 @@ import { styles } from './styles';
 
 import './components/capabilities-nav/component';
 import './components/home-hero/component';
+import '../../components/icon/component';
 
 @customElement('home-page')
 export class HomePage extends LitElement {
