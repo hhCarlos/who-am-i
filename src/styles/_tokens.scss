@@ -1,0 +1,128 @@
+/* ======================================================
+   COLOR PRIMITIVES
+   ====================================================== */
+
+:root {
+  /* Brand red */
+  --red-50: hsl(4 80% 96%);
+  --red-100: hsl(4 78% 91%);
+  --red-300: hsl(4 76% 70%);
+  --red-500: hsl(4 78% 48%);
+  --red-600: hsl(4 82% 40%);
+  --red-700: hsl(4 84% 32%);
+
+  /* Warm editorial paper */
+  --paper-50: hsl(45 33% 97%);
+  --paper-100: hsl(42 25% 94%);
+  --paper-200: hsl(40 18% 88%);
+
+  /* Neutral ink */
+  --ink-50: hsl(0 0% 97%);
+  --ink-100: hsl(0 0% 91%);
+  --ink-300: hsl(0 0% 68%);
+  --ink-500: hsl(0 0% 42%);
+  --ink-700: hsl(0 0% 24%);
+  --ink-800: hsl(0 0% 15%);
+  --ink-900: hsl(0 0% 9%);
+  --ink-950: hsl(0 0% 5%);
+
+  /* Supporting accent */
+  --amber-400: hsl(38 92% 58%);
+  --amber-500: hsl(35 90% 50%);
+
+  /* ====================================================
+     LIGHT THEME — DEFAULT
+     ==================================================== */
+
+  color-scheme: light;
+
+  --color-canvas: var(--paper-50);
+  --color-surface: hsl(0 0% 100%);
+  --color-surface-muted: var(--paper-100);
+  --color-surface-strong: var(--ink-900);
+
+  --color-text: var(--ink-950);
+  --color-text-muted: var(--ink-500);
+  --color-text-subtle: var(--ink-300);
+  --color-text-inverse: var(--paper-50);
+
+  --color-border: hsl(36 12% 78%);
+  --color-border-strong: var(--ink-800);
+
+  --color-accent: var(--red-500);
+  --color-accent-hover: var(--red-600);
+  --color-accent-active: var(--red-700);
+  --color-accent-soft: var(--red-50);
+  --color-on-accent: hsl(0 0% 100%);
+
+  --color-focus: var(--amber-500);
+
+  --shadow-color: hsl(0 0% 0% / 0.1);
+  --overlay-color: hsl(0 0% 0% / 0.62);
+
+  --color-header-background: var(--ink-900);
+  --color-header-text: var(--paper-50);
+  --color-header-link: var(--ink-100);
+  --color-header-link-hover: var(--paper-50);
+  --color-header-link-active: var(--color-accent);
+  --color-header-border: var(--color-accent);
+
+  --space-0: 0;
+
+  --space-1: 0.4rem;  /* 4px */
+  --space-2: 0.8rem;  /* 8px */
+  --space-3: 1.2rem;  /* 12px */
+  --space-4: 1.6rem;  /* 16px */
+  --space-5: 2rem;    /* 20px */
+  --space-6: 2.4rem;  /* 24px */
+  --space-8: 3.2rem;  /* 32px */
+  --space-10: 4rem;   /* 40px */
+  --space-12: 4.8rem; /* 48px */
+  --space-16: 6.4rem; /* 64px */
+  --space-20: 8rem;   /* 80px */
+  --space-24: 9.6rem; /* 96px */
+  --space-32: 12.8rem; /* 128px */
+}
+
+/* ======================================================
+   DARK THEME
+   ====================================================== */
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-canvas: var(--ink-950);
+  --color-surface: var(--ink-900);
+  --color-surface-muted: var(--ink-800);
+  --color-surface-strong: var(--paper-50);
+
+  --color-text: var(--paper-50);
+  --color-text-muted: hsl(40 8% 68%);
+  --color-text-subtle: hsl(40 6% 52%);
+  --color-text-inverse: var(--ink-950);
+
+  --color-border: hsl(0 0% 24%);
+  --color-border-strong: hsl(0 0% 48%);
+
+  /*
+   * En fondos oscuros el rojo necesita más luminosidad.
+   * No reutilizamos directamente red-500.
+   */
+  --color-accent: hsl(4 88% 62%);
+  --color-accent-hover: hsl(4 90% 69%);
+  --color-accent-active: hsl(4 82% 54%);
+  --color-accent-soft: hsl(4 42% 17%);
+  --color-on-accent: var(--ink-950);
+
+  --color-focus: var(--amber-400);
+
+  --shadow-color: hsl(0 0% 0% / 0.45);
+  --overlay-color: hsl(0 0% 0% / 0.78);
+
+  --color-header-background: var(--ink-950);
+  --color-header-text: var(--paper-50);
+  --color-header-link: hsl(40 8% 72%);
+  --color-header-link-hover: hsl(0 0% 100%);
+  --color-header-link-active: var(--color-accent);
+  --color-header-border: var(--color-accent);
+}

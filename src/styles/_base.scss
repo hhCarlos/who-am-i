@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 32rem;
+  min-height: 100vh;
+
+  color: var(--color-text);
+  background-color: var(--color-canvas);
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 0.3rem solid var(--color-focus);
+  outline-offset: 0.3rem;
+}
+
+::selection {
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+}
