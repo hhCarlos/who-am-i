@@ -1,3 +1,8 @@
 import { html } from 'lit';
 
-export const template = () => html` <h1>Titulo para Home basado en template!</h1> `;
+export const template = () => html`
+  <main class="home-page">
+    <capabilities-nav></capabilities-nav>
+    <home-hero></home-hero>
+  </main>
+`;
