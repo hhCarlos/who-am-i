@@ -78,6 +78,7 @@
   --space-8: 3.2rem;  /* 32px */
   --space-10: 4rem;   /* 40px */
   --space-12: 4.8rem; /* 48px */
+  --space-14: 5.5rem; /* 55px */
   --space-16: 6.4rem; /* 64px */
   --space-20: 8rem;   /* 80px */
   --space-24: 9.6rem; /* 96px */
@@ -90,6 +91,45 @@
 
   --page-section-md-max-width: 96rem;
   --page-section-md-min-height: 32rem;
+
+  /* ====================================================
+     TYPOGRAPHY
+     ==================================================== */
+
+  --font-family-base:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  /* Tamaños base */
+  --font-size-xs: 1.2rem;   /* 12px */
+  --font-size-sm: 1.4rem;   /* 14px */
+  --font-size-md: 1.6rem;   /* 16px */
+  --font-size-lg: 1.8rem;   /* 18px */
+  --font-size-xl: 2.4rem;   /* 24px */
+  --font-size-2xl: 3.2rem;  /* 32px */
+  --font-size-3xl: 4rem;    /* 40px */
+
+  /* Títulos responsivos */
+  --font-size-section-title: clamp(3.2rem, 5vw, 4.8rem);
+  --font-size-page-title: clamp(4rem, 7vw, 6.4rem);
+
+  /* Pesos */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Altura de línea */
+  --line-height-tight: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  /* Espaciado entre letras */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
 }
 
 /* ======================================================

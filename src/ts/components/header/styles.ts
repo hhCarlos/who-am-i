@@ -44,7 +44,7 @@ export const styles = css`
 
     color: var(--color-header-text);
 
-    font-size: 1.8rem;
+    font-size: var(--font-size-lg);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.05em;
@@ -70,7 +70,7 @@ export const styles = css`
 
     color: var(--color-header-link);
 
-    font-size: 1.4rem;
+    font-size: var(--font-size-sm);
     font-weight: 500;
     line-height: 1;
     text-decoration: none;
