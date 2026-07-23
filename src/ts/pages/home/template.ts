@@ -4,5 +4,6 @@ export const template = () => html`
   <main class="home-page">
     <capabilities-nav></capabilities-nav>
     <home-hero></home-hero>
+    <capabilities-showcase></capabilities-showcase>
   </main>
 `;

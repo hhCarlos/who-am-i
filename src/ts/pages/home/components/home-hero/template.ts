@@ -4,7 +4,7 @@ export const template = () => html`
   <section class="page-section page-section--md home-hero">
     <div class="home-hero__title">
       <h2>¡Bienvenidos!</h2>
-      <app-icon name="default" size="mega"></app-icon>
+      <app-icon name="hero" size="mega"></app-icon>
     </div>
 
     <p class="home-hero__description">
