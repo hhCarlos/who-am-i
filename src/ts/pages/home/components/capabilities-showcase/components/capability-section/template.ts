@@ -18,30 +18,27 @@ export const template = ({
     class="page-section page-section--md capability-section"
     aria-labelledby="${sectionId}-title"
   >
-    <div class="capability-section__content">
-      <h2
-        id="${sectionId}-title"
-        class="capability-section__title"
-      >
-        ${heading}
-      </h2>
-
-      <p class="capability-section__description">
-        ${description}
-      </p>
-    </div>
-
-    <div
-      class="capability-section__gallery"
-      aria-label="Tecnologías relacionadas con ${heading}"
-    >
+    <figure class="capability-section__gallery">
       ${gallery.map(
         (item) => html`
-          <span class="capability-section__gallery-item">
-            ${item}
-          </span>
+          <img 
+            class="gallery__img" 
+            src="${item}" 
+          />
         `,
       )}
+    </figure>
+    <div class="capability-section__content">
+      <h3 
+        id="${sectionId}-title"
+        class="content__title"
+      >
+        ${heading}
+      </h3>
+
+      <p class="content__description">
+        ${description}
+      </p>
     </div>
   </section>
 `;

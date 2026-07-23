@@ -27,6 +27,12 @@ export class CapabilitySection extends LitElement {
   })
   accessor gallery: string[] = [];
 
+  @property({
+    type: Boolean,
+    reflect: true
+  })
+  accessor reverse = false;
+
   protected render() {
     return template({
       sectionId: this.sectionId,
