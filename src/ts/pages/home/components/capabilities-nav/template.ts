@@ -6,23 +6,23 @@ export const template = () => html`
     aria-label="Áreas de experiencia"
   >
     <div class="capabilities-nav__container">
-      <a class="capabilities-nav__link" href="#frontend">
+      <a class="capabilities-nav__link">
         Frontend
       </a>
 
-      <a class="capabilities-nav__link" href="#backend">
+      <a class="capabilities-nav__link">
         Backend y APIs
       </a>
 
-      <a class="capabilities-nav__link" href="#data">
+      <a class="capabilities-nav__link">
         Datos y persistencia
       </a>
 
-      <a class="capabilities-nav__link" href="#quality">
+      <a class="capabilities-nav__link">
         Calidad y automatización
       </a>
 
-      <a class="capabilities-nav__link" href="#cloud">
+      <a class="capabilities-nav__link">
         Arquitectura y cloud
       </a>
     </div>
