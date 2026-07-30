@@ -1,0 +1,28 @@
+html {
+  color-scheme: light;
+
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+
+  background-color: var(--color-background);
+}
+
+::selection {
+  color: var(--color-text);
+  background-color: var(--color-selection);
+}
+
+:focus-visible {
+  outline: var(--border-width-md) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,19 +1,59 @@
 ---
-import AppFooter from "../components/layout/AppFooter.astro";
-import AppHeader from "../components/layout/AppHeader.astro";
+import AppFooter from '../components/layout/app/AppFooter.astro';
+import AppHeader from '../components/layout/app/AppHeader.astro';
 
+import '../styles/global.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Who Am I | Carlos Hernández',
+  description = 'Portafolio profesional de Carlos Hernández.',
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Titulo aqui</title>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <meta
+      name="description"
+      content={description}
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+
+    <title>{title}</title>
   </head>
+
   <body>
-    <div class="site-layout">
+    <a
+      class="skip-link"
+      href="#main-content"
+    >
+      Saltar al contenido
+    </a>
+
+    <div class="app-layout">
       <AppHeader />
 
-      <main class="site-main">
+      <main
+        id="main-content"
+        class="app-layout__main"
+      >
         <slot />
       </main>
 
@@ -21,3 +61,35 @@ import AppHeader from "../components/layout/AppHeader.astro";
     </div>
   </body>
 </html>
+
+<style lang="scss">
+  .app-layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100dvh;
+
+    &__main {
+      width: 100%;
+    }
+  }
+
+  .skip-link {
+    position: fixed;
+    z-index: 100;
+    top: var(--space-4);
+    left: var(--space-4);
+
+    padding: var(--space-3) var(--space-4);
+
+    background-color: var(--color-surface-inverse);
+    color: var(--color-text-inverse);
+    text-decoration: none;
+
+    transform: translateY(-200%);
+
+    &:focus {
+      transform: translateY(0);
+    }
+  }
+</style>

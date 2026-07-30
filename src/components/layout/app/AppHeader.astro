@@ -1,0 +1,155 @@
+---
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const navigationItems = [
+  {
+    label: 'Inicio',
+    href: '/',
+  },
+  {
+    label: 'Proyectos',
+    href: '/projects',
+  },
+  {
+    label: 'Sobre mí',
+    href: '/about',
+  },
+  {
+    label: 'Contacto',
+    href: '/contact',
+  },
+];
+
+const isActive = (href: string): boolean => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+
+  return (
+    currentPath === href ||
+    currentPath.startsWith(`${href}/`)
+  );
+};
+---
+
+<nav
+  class="navbar"
+  aria-label="Navegación principal"
+>
+  <ul class="navbar__list">
+    <li class="navbar__item navbar__item--brand">
+      <a
+        class="navbar__brand"
+        href="/"
+        aria-label="Ir al inicio"
+      >
+        <span class="navbar__title">
+          Who Am I
+        </span>
+      </a>
+    </li>
+
+    {
+      navigationItems.map(({ label, href }) => {
+        const active = isActive(href);
+
+        return (
+          <li class="navbar__item">
+            <a
+              class:list={[
+                'navbar__link',
+                {
+                  'navbar__link--active': active,
+                },
+              ]}
+              href={href}
+              aria-current={active ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style lang="scss">
+.navbar {
+  z-index: var(--z-sticky);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: var(--space-4);
+
+  background-color: var(--color-white);
+  border-bottom: solid 0.3125rem var(--color-primary);
+  box-shadow: var(--shadow-md);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    &--brand {
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__link {
+    position: relative;
+
+    padding-block: var(--space-2);
+
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+
+    transition: var(--transition-color);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-primary);
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      height: 0.125rem;
+
+      background-color: var(--color-primary);
+
+      content: '';
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: var(--transition-transform);
+    }
+
+    &--active {
+      color: var(--color-primary);
+      font-weight: var(--font-weight-semibold);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+</style>
