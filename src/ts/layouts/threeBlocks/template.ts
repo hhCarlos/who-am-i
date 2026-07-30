@@ -1,7 +1,0 @@
-import { html } from 'lit';
-
-export const template = () => html`
-  <header><slot name="header"></slot></header>
-  <main><slot></slot></main>
-  <footer><slot name="footer"></slot></footer>
-`;
