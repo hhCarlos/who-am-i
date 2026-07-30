@@ -1,22 +1,19 @@
 import { html } from 'lit';
 
 type CapabilitySectionTemplateProperties = {
-  sectionId: string;
   heading: string;
   description: string;
   gallery: string[];
 };
 
 export const template = ({
-  sectionId,
   heading,
   description,
   gallery,
 }: CapabilitySectionTemplateProperties) => html`
   <section
-    id=${sectionId}
     class="page-section page-section--md capability-section"
-    aria-labelledby="${sectionId}-title"
+    aria-labelledby="capability-title"
   >
     <figure class="capability-section__gallery">
       ${gallery.map(
@@ -30,7 +27,7 @@ export const template = ({
     </figure>
     <div class="capability-section__content">
       <h3 
-        id="${sectionId}-title"
+        id="capability-heading"
         class="content__title"
       >
         ${heading}

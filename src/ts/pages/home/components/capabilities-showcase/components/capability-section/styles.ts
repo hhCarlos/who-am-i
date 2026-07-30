@@ -3,6 +3,12 @@ import { css } from 'lit';
 export const styles = css`
   :host {
     display: block;
+
+    scroll-margin-top: calc(
+      var(--header-height) +
+      var(--capabilities-nav-height) +
+      var(--space-4)
+    );
   }
 
   /* =====================================================

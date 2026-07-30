@@ -7,7 +7,7 @@ export const template = () => html`
     ${capabilitySections.map(
       ({ id, heading, description, gallery, reverse }) => html`
         <capability-section
-          .sectionId=${id}
+          id=${id}
           .heading=${heading}
           .description=${description}
           .gallery=${gallery}

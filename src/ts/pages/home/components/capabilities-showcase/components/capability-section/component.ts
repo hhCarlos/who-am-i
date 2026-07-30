@@ -10,12 +10,6 @@ import { styles } from './styles';
 export class CapabilitySection extends LitElement {
   static styles = [styles, pageSectionStyles];
 
-  @property({
-    type: String,
-    attribute: 'section-id',
-  })
-  accessor sectionId = '';
-
   @property({ type: String })
   accessor heading = '';
 
@@ -35,7 +29,6 @@ export class CapabilitySection extends LitElement {
 
   protected render() {
     return template({
-      sectionId: this.sectionId,
       heading: this.heading,
       description: this.description,
       gallery: this.gallery,
