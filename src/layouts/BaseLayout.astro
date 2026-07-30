@@ -1,0 +1,23 @@
+---
+import AppFooter from "../components/layout/AppFooter.astro";
+import AppHeader from "../components/layout/AppHeader.astro";
+
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Titulo aqui</title>
+  </head>
+  <body>
+    <div class="site-layout">
+      <AppHeader />
+
+      <main class="site-main">
+        <slot />
+      </main>
+
+      <AppFooter />
+    </div>
+  </body>
+</html>
