@@ -1,58 +1,24 @@
-# ========================================
-# 🌐 WHO-AM-I PROJECT GITIGNORE
-# ========================================
+# build output
+dist/
+# generated types
+.astro/
 
-# Node & dependencies
+# dependencies
 node_modules/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Build output
-dist/
-build/
-.cache/
-.tmp/
-coverage/
 
-# TypeScript
-*.tsbuildinfo
-
-# Editor & system
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
-
-# Env & local config
+# environment variables
 .env
-.env.*
-!.env.example
+.env.production
 
-# Logs
-*.log
-logs/
-*.pid
-*.seed
-*.pid.lock
+# macOS-specific files
+.DS_Store
 
-# Misc
-*.tgz
-*.zip
-
-# OS-specific
-ehthumbs.db
-Icon?
-Desktop.ini
-
-# Local testing files
-test-output/
-playwright-report/
-cypress/videos/
-cypress/screenshots/
-
-# ========================================
-# Fin del archivo. Manténlo limpio.
-# ========================================
+# jetbrains setting folder
+.idea/
