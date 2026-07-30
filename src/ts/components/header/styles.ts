@@ -79,6 +79,11 @@ export const styles = css`
     transition: color var(--transition-fast);
   }
 
+  .site-header__link--active {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
   .site-header__link::after {
     content: '';
 

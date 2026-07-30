@@ -8,8 +8,13 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "ESNext",
-    "target": "ES6",
+    "target": "ES2017",
     "types": [],
+    "lib": [
+      "ES2017",
+      "DOM",
+      "DOM.Iterable"
+    ],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],

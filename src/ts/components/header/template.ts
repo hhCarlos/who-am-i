@@ -1,6 +1,18 @@
-import { html } from 'lit';
+import { html, nothing } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
+import type { SectionId } from './types';
 
-export const template = () => html`
+const navigationItems: Array<{
+  id: SectionId;
+  label: string;
+}> = [
+  { id: 'home', label: 'Inicio' },
+  { id: 'projects', label: 'Proyectos' },
+  { id: 'about', label: 'Sobre mí' },
+  { id: 'contact', label: 'Contacto' }
+];
+
+export const template = (activeSection: SectionId) => html`
   <header class="site-header">
     <div class="site-header__container">
       <a
@@ -15,21 +27,22 @@ export const template = () => html`
         class="site-header__nav"
         aria-label="Navegación principal"
       >
-        <a class="site-header__link" href="#home">
-          Inicio
-        </a>
+        ${navigationItems.map(({id, label}) => {
+          const isActive = activeSection === id;
 
-        <a class="site-header__link" href="#projects">
-          Proyectos
-        </a>
-
-        <a class="site-header__link" href="#about">
-          Sobre mí
-        </a>
-
-        <a class="site-header__link" href="#contact">
-          Contacto
-        </a>
+          return html`
+            <a
+              class=${classMap({
+                'site-header__link': true,
+                'site-header__link--active': isActive,
+              })} 
+              href="#${id}"
+              aria-current=${isActive ? 'location' : nothing }
+            >
+              ${label}
+            </a>
+          `;
+        })}
       </nav>
     </div>
   </header>
