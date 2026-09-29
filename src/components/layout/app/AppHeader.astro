@@ -1,55 +1,68 @@
 ---
-import { url } from "astro:schema";
-import Icon, { type IconName } from "../../ui/icon/Icon.astro";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Icon, { type IconName } from '../../ui/icon/Icon.astro';
 
-const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const locale = Astro.currentLocale === 'es' ? 'es' : 'en';
+const otherLocale = locale === 'en' ? 'es' : 'en';
+
+const labels = {
+  en: {
+    home: 'Home',
+    projects: 'Projects',
+    about: 'About me',
+    contact: 'Contact',
+    language: 'Ver en español',
+    theme: 'Change theme',
+    navigation: 'Main navigation',
+  },
+  es: {
+    home: 'Inicio',
+    projects: 'Proyectos',
+    about: 'Sobre mí',
+    contact: 'Contacto',
+    language: 'View in English',
+    theme: 'Cambiar tema',
+    navigation: 'Navegación principal',
+  },
+}[locale];
+
+const homeHref = getRelativeLocaleUrl(locale, '');
+const languageHref = getRelativeLocaleUrl(otherLocale, '');
+
+const normalizePath = (path: string) => path.replace(/\/$/, '') || '/';
+const currentPath = normalizePath(Astro.url.pathname);
 
 const navigationItems = [
-  {
-    label: 'Inicio',
-    href: '/',
-    available: true,
-  },
-  {
-    label: 'Proyectos',
-    href: '/projects',
-    available: false,
-  },
-  {
-    label: 'Sobre mí',
-    href: '/about',
-    available: false,
-  },
-  {
-    label: 'Contacto',
-    href: '/contact',
-    available: false,
-  },
+  { label: labels.home, href: homeHref, available: true },
+  { label: labels.projects, href: getRelativeLocaleUrl(locale, 'projects'), available: false },
+  { label: labels.about, href: getRelativeLocaleUrl(locale, 'about'), available: false },
+  { label: labels.contact, href: getRelativeLocaleUrl(locale, 'contact'), available: false },
 ];
 
 const actionsItems = [
   {
-    label: 'Github',
+    label: 'GitHub',
     action: 'url',
     iconName: 'github',
     url: 'https://github.com/hhCarlos',
     available: true,
   },
   {
-    label: 'Linkedin',
+    label: 'LinkedIn',
     action: 'url',
     iconName: 'linkedin',
     url: 'https://linkedin.com/in/carlos-enrique-hernandez-hernandez-65aa5433a',
     available: true,
   },
   {
-    label: 'Cambiar idioma',
+    label: labels.language,
     action: 'language',
     iconName: 'world',
-    available: false,
+    url: languageHref,
+    available: true,
   },
   {
-    label: 'Cambiar tema',
+    label: labels.theme,
     action: 'theme',
     iconName: 'theme',
     available: true,
@@ -57,16 +70,11 @@ const actionsItems = [
 ];
 
 const isActive = (href: string): boolean => {
-  if (href === '/') {
-    return currentPath === '/';
-  }
-
-  return (
-    currentPath === href ||
-    currentPath.startsWith(`${href}/`)
-  );
+  const path = normalizePath(href);
+  return currentPath === path || (path !== '/' && currentPath.startsWith(`${path}/`));
 };
 ---
+
 <script>
   function handleAction(event: MouseEvent) {
     const button = event.currentTarget as HTMLButtonElement;
@@ -130,13 +138,13 @@ const isActive = (href: string): boolean => {
         actionsItems
           .filter(({ available }) => available)
           .map((item) =>
-            item.action === 'url' ? (
+            item.action === 'url' || item.action === 'language' ? (
               <a
                 class="navbar__action"
                 href={item.url}
                 aria-label={item.label}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={item.action === 'url' ? '_blank' : undefined}
+                rel={item.action === 'url' ? 'noopener noreferrer' : undefined}
               >
                 <Icon name={item.iconName as IconName} />
               </a>
@@ -200,6 +208,7 @@ const isActive = (href: string): boolean => {
 
     &:hover {
       transform: scale(1.2);
+      color: var(--color-secondary);
       box-shadow: var(--shadow-sm);
     }
   }

@@ -1,232 +1,121 @@
 ---
-import HomeFeature from "./HomeFeature.astro"
+import HomeFeature from './HomeFeature.astro';
+import en from '../../data/home/en.json';
+import es from '../../data/home/es.json';
+
+type Image = {
+  src: string;
+  alt: string;
+};
+
+const content: any = Astro.currentLocale === 'es' ? es : en;
 ---
 
 <div class="home-content">
     <div class="home-container">
         <h1 class="home-container__title">
-            Hola, soy Carlos Hernández
+          {content.hero.title}
         </h1>
 
         <p class="home-container__text">
-            Contruyo aplicaciones web, APIs y experiencias 
-            digitales que realmente funcionan.
+          {content.hero.paragraphOne}
         </p>
 
         <p class="home-container__text">
-            Desarrollo enfocado en soluciones de frontend,
-            backend, automatizacion de pruebas y soluciones
-            en la nube.
+            {content.hero.paragraphTwo}
         </p>
     </div>
 </div>
 
-<HomeFeature title="Arquitectura" reverse>
+<HomeFeature title={content.architecture.title} reverse>
   <div slot="visual" class="feature-gallery">
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
+    {content.architecture.images.map((image: Image) => (
+      <img
+        class="feature-gallery__image"
+        src={image.src}
+        alt={image.alt}
+      />
+    ))}
   </div>
 
-  <p>
-    Organizo las aplicaciones pensando en sus interfaces, APIs y datos
-    como partes de una misma solución.
-  </p>
-  <p>
-    Defino flujos, responsabilidades y contratos entre componentes para
-    que el producto pueda crecer sin perder claridad.
-  </p>
+  <p>{content.architecture.paragraphOne}</p>
+  <p>{content.architecture.paragraphTwo}</p>
 </HomeFeature>
 
-<HomeFeature title="Frontend">
+<HomeFeature title={content.frontend.title}>
   <div slot="visual" class="feature-gallery">
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
+    {content.frontend.images.map((image: Image) => (
+      <img
+        class="feature-gallery__image"
+        src={image.src}
+        alt={image.alt}
+      />
+    ))}
   </div>
 
-  <p>
-    Construyo interfaces web y móviles responsivas con JavaScript y
-    TypeScript, principalmente con Angular, Vue y React Native.
-  </p>
-  <p>
-    Integro APIs y cuido los componentes, los estados y la interacción
-    para que cada pantalla sea útil y fácil de mantener.
-  </p>
+  <p>{content.frontend.paragraphOne}</p>
+  <p>{content.frontend.paragraphTwo}</p>
 </HomeFeature>
 
-<HomeFeature title="Backend" reverse>
+<HomeFeature title={content.backend.title} reverse>
   <div slot="visual" class="feature-gallery">
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
+    {content.backend.images.map((image: Image) => (
+      <img
+        class="feature-gallery__image"
+        src={image.src}
+        alt={image.alt}
+      />
+    ))}
   </div>
-  
-  <p>
-    Desarrollo endpoints e integro servicios que conectan las
-    aplicaciones con sus datos y reglas de negocio.
-  </p>
-  <p>
-    Actualmente profundizo en Node.js y NestJS, con atención a la
-    validación, el manejo de errores y la autenticación.
-  </p>
+
+  <p>{content.backend.paragraphOne}</p>
+  <p>{content.backend.paragraphTwo}</p>
 </HomeFeature>
 
-<HomeFeature title="Persistencia">
+<HomeFeature title={content.persistence.title}>
   <div slot="visual" class="feature-gallery">
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
+    {content.persistence.images.map((image: Image) => (
+      <img
+        class="feature-gallery__image"
+        src={image.src}
+        alt={image.alt}
+      />
+    ))}
   </div>
 
-  <p>
-    Diseño modelos de datos relacionales y trabajo con PostgreSQL
-    y MySQL para respaldar las necesidades de cada funcionalidad.
-  </p>
-  <p>
-    Escribo consultas y reviso cómo se relacionan los datos antes
-    de llevarlos a una API o a una interfaz.
-  </p>
-  <p>
-    Uso Docker y Docker Compose para levantar bases de datos y servicios
-    de desarrollo en entornos locales reproducibles.
-  </p>
+  <p>{content.persistence.paragraphOne}</p>
+  <p>{content.persistence.paragraphTwo}</p>
+  <p>{content.persistence.paragraphThree}</p>
 </HomeFeature>
 
-<HomeFeature title="Pruebas" reverse>
+<HomeFeature title={content.testing.title} reverse>
   <div slot="visual" class="feature-gallery">
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
+    {content.testing.images.map((image: Image) => (
+      <img
+        class="feature-gallery__image"
+        src={image.src}
+        alt={image.alt}
+      />
+    ))}
   </div>
 
-  <p>
-    Convierto los requisitos y flujos del producto en escenarios
-    verificables, matrices y planes de prueba.
-  </p>
-  <p>
-    Esto ayuda a detectar casos límite y a acordar qué debe funcionar
-    antes de dar una funcionalidad por terminada.
-  </p>
+  <p>{content.testing.paragraphOne}</p>
+  <p>{content.testing.paragraphTwo}</p>
 </HomeFeature>
 
-<HomeFeature title="Pruebas Automatizadas">
+<HomeFeature title={content.automatedTesting.title}>
   <div slot="visual" class="feature-gallery">
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
-    <img 
-      class="feature-gallery__image" 
-      src="https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/" 
-      alt="Diagrama de arquitectura de un proyecto" 
-    />
+    {content.automatedTesting.images.map((image: Image) => (
+      <img
+        class="feature-gallery__image"
+        src={image.src}
+        alt={image.alt}
+      />
+    ))}
   </div>
-  
-  <p>
-    He trabajado con escenarios BDD y automatización de pruebas para
-    comprobar comportamientos de forma repetible.
-  </p>
-  <p>
-    Uso herramientas como Cypress y Playwright según el proyecto,
-    buscando que las pruebas aporten confianza al cambiar el código.
-  </p>
+
+  <p>{content.automatedTesting.paragraphOne}</p>
+  <p>{content.automatedTesting.paragraphTwo}</p>
 </HomeFeature>
 
 <style lang="scss">

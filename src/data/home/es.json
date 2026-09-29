@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "title": "Hola, soy Carlos Hernández",
+    "paragraphOne": "Construyo aplicaciones web, APIs y experiencias digitales que realmente funcionan.",
+    "paragraphTwo": "Me enfoco en soluciones de frontend, backend, automatización de pruebas y servicios en la nube."
+  },
+  "architecture": {
+    "title": "Arquitectura",
+    "paragraphOne": "Organizo las aplicaciones pensando en sus interfaces, APIs y datos como partes de una misma solución.",
+    "paragraphTwo": "Defino flujos, responsabilidades y contratos entre componentes para que el producto pueda crecer sin perder claridad.",
+    "images": [
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Diagrama de arquitectura de un proyecto"
+      },
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Diagrama de arquitectura de un proyecto"
+      },
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Diagrama de arquitectura de un proyecto"
+      },
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Diagrama de arquitectura de un proyecto"
+      }
+    ]
+  },
+  "frontend": {
+    "title": "Frontend",
+    "paragraphOne": "Construyo interfaces web y móviles responsivas con JavaScript y TypeScript, principalmente con Angular, Vue y React Native.",
+    "paragraphTwo": "Integro APIs y cuido los componentes, los estados y la interacción para que cada pantalla sea útil y fácil de mantener.",
+    "images": [
+        {
+          "src": "/images/home/frontend/frontend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/frontend/frontend-two.png",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        }
+    ]
+  },
+  "backend": {
+    "title": "Backend",
+    "paragraphOne": "Desarrollo endpoints e integro servicios que conectan las aplicaciones con sus datos y reglas de negocio.",
+    "paragraphTwo": "Actualmente profundizo en Node.js y NestJS, con atención a la validación, el manejo de errores y la autenticación.",
+    "images": [
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        }
+    ]
+  },
+  "persistence": {
+    "title": "Persistencia",
+    "paragraphOne": "Diseño modelos de datos relacionales y trabajo con PostgreSQL y MySQL para respaldar las necesidades de cada funcionalidad.",
+    "paragraphTwo": "Escribo consultas y reviso cómo se relacionan los datos antes de llevarlos a una API o a una interfaz.",
+    "paragraphThree": "Uso Docker y Docker Compose para levantar bases de datos y servicios de desarrollo en entornos locales reproducibles.",
+    "images": [
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        }
+    ]
+  },
+  "testing": {
+    "title": "Pruebas",
+    "paragraphOne": "Convierto los requisitos y flujos del producto en escenarios verificables, matrices y planes de prueba.",
+    "paragraphTwo": "Esto ayuda a detectar casos límite y a acordar qué debe funcionar antes de dar una funcionalidad por terminada.",
+    "images": [
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        }
+    ]
+  },
+  "automatedTesting": {
+    "title": "Pruebas Automatizadas",
+    "paragraphOne": "He trabajado con escenarios BDD y automatización de pruebas para comprobar comportamientos de forma repetible.",
+    "paragraphTwo": "Uso herramientas como Cypress y Playwright según el proyecto, buscando que las pruebas aporten confianza al cambiar el código.",
+    "images": [
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        }
+    ]
+  }
+}

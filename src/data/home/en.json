@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "title": "Hi, I'm Carlos Hernández",
+    "paragraphOne": "I build web applications, APIs, and digital experiences that work.",
+    "paragraphTwo": "I focus on frontend, backend, test automation, and cloud solutions."
+  },
+  "architecture": {
+    "title": "Architecture",
+    "paragraphOne": "I approach interfaces, APIs, and data as connected parts of the same application.",
+    "paragraphTwo": "I define workflows, responsibilities, and contracts between components so a product can grow while remaining clear and maintainable.",
+    "images": [
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Architecture diagram for a project"
+      },
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Architecture diagram for a project"
+      },
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Architecture diagram for a project"
+      },
+      {
+        "src": "/images/home/architecture/architecture-one.png",
+        "alt": "Architecture diagram for a project"
+      }
+    ]
+  },
+  "frontend": {
+    "title": "Frontend",
+    "paragraphOne": "I build responsive web and mobile interfaces with JavaScript and TypeScript, primarily using Angular, Vue, and React Native.",
+    "paragraphTwo": "I integrate APIs and pay attention to components, state, and interactions so every screen is useful and easy to maintain.",
+    "images": [
+        {
+          "src": "/images/home/frontend/frontend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/frontend/frontend-two.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/frontend/frontend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/frontend/frontend-two.png",
+          "alt": ""
+        }
+    ]
+  },
+  "backend": {
+    "title": "Backend",
+    "paragraphOne": "I build endpoints and integrate services that connect applications to their data and business logic.",
+    "paragraphTwo": "I'm currently deepening my knowledge of Node.js and NestJS, focusing on validation, error handling, and authentication.",
+    "images": [
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/backend/backend-one.png",
+          "alt": ""
+        }
+    ]
+  },
+  "persistence": {
+    "title": "Data Persistence",
+    "paragraphOne": "I design relational data models and work with PostgreSQL and MySQL to support each feature's requirements.",
+    "paragraphTwo": "I write queries and examine how data relates before connecting it to an API or an interface.",
+    "paragraphThree": "I use Docker and Docker Compose to run databases and development services in reproducible local environments.",
+    "images": [
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        },
+        {
+          "src": "/images/home/persistence/persistence-one.png",
+          "alt": ""
+        }
+    ]
+  },
+  "testing": {
+    "title": "Testing",
+    "paragraphOne": "I turn product requirements and workflows into testable scenarios, test matrices, and test plans.",
+    "paragraphTwo": "This helps identify edge cases and agree on what should work before a feature is considered complete.",
+    "images": [
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        }
+    ]
+  },
+  "automatedTesting": {
+    "title": "Automated Testing",
+    "paragraphOne": "I've worked with BDD scenarios and automated tests to check application behavior consistently.",
+    "paragraphTwo": "I use tools such as Cypress and Playwright depending on the project, aiming to make tests a reliable source of confidence when changing code.",
+    "images": [
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        },
+        {
+          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "alt": ""
+        }
+    ]
+  }
+}
