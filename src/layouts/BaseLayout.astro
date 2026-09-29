@@ -39,6 +39,18 @@ const {
     <title>{title}</title>
   </head>
 
+  <script is:inline>
+    try {
+      const savedTheme = localStorage.getItem('who-am-i-theme');
+
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch {
+      // El sitio sigue usando el tema claro si el almacenamiento no está disponible.
+    }
+  </script>
+
   <body>
     <a
       class="skip-link"
@@ -71,6 +83,7 @@ const {
 
     &__main {
       width: 100%;
+      margin-top: 5rem;
     }
   }
 

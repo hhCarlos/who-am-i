@@ -1,22 +1,58 @@
 ---
+import { url } from "astro:schema";
+import Icon, { type IconName } from "../../ui/icon/Icon.astro";
+
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 const navigationItems = [
   {
     label: 'Inicio',
     href: '/',
+    available: true,
   },
   {
     label: 'Proyectos',
     href: '/projects',
+    available: false,
   },
   {
     label: 'Sobre mí',
     href: '/about',
+    available: false,
   },
   {
     label: 'Contacto',
     href: '/contact',
+    available: false,
+  },
+];
+
+const actionsItems = [
+  {
+    label: 'Github',
+    action: 'url',
+    iconName: 'github',
+    url: 'https://github.com/hhCarlos',
+    available: true,
+  },
+  {
+    label: 'Linkedin',
+    action: 'url',
+    iconName: 'linkedin',
+    url: 'https://linkedin.com/in/carlos-enrique-hernandez-hernandez-65aa5433a',
+    available: true,
+  },
+  {
+    label: 'Cambiar idioma',
+    action: 'language',
+    iconName: 'world',
+    available: false,
+  },
+  {
+    label: 'Cambiar tema',
+    action: 'theme',
+    iconName: 'theme',
+    available: true,
   },
 ];
 
@@ -31,6 +67,23 @@ const isActive = (href: string): boolean => {
   );
 };
 ---
+<script>
+  function handleAction(event: MouseEvent) {
+    const button = event.currentTarget as HTMLButtonElement;
+
+    if (button.dataset.action === 'theme') {
+      const root = document.documentElement;
+      const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+
+      root.dataset.theme = nextTheme;
+      localStorage.setItem('who-am-i-theme', nextTheme);
+    }
+  }
+
+  document
+    .querySelectorAll<HTMLButtonElement>('.navbar__action[data-action]')
+    .forEach((button) => button.addEventListener('click', handleAction));
+</script>
 
 <nav
   class="navbar"
@@ -50,27 +103,56 @@ const isActive = (href: string): boolean => {
     </li>
 
     {
-      navigationItems.map(({ label, href }) => {
-        const active = isActive(href);
+      navigationItems
+        .filter(({ available }) => available)
+        .map(({ label, href }) => {
+          const active = isActive(href);
 
-        return (
-          <li class="navbar__item">
-            <a
-              class:list={[
-                'navbar__link',
-                {
-                  'navbar__link--active': active,
-                },
-              ]}
-              href={href}
-              aria-current={active ? 'page' : undefined}
-            >
-              {label}
-            </a>
-          </li>
-        );
-      })
+          return (
+            <li class="navbar__item">
+              <a
+                class:list={[
+                  'navbar__link',
+                  { 'navbar__link--active': active },
+                ]}
+                href={href}
+                aria-current={active ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })
     }
+
+    <li class="navbar__item navbar__item--actions">
+      {
+        actionsItems
+          .filter(({ available }) => available)
+          .map((item) =>
+            item.action === 'url' ? (
+              <a
+                class="navbar__action"
+                href={item.url}
+                aria-label={item.label}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name={item.iconName as IconName} />
+              </a>
+            ) : (
+              <button
+                type="button"
+                class="navbar__action"
+                data-action={item.action}
+                aria-label={item.label}
+              >
+                <Icon name={item.iconName as IconName} />
+              </button>
+            )
+          )
+      }
+    </li>
   </ul>
 </nav>
 
@@ -84,7 +166,7 @@ const isActive = (href: string): boolean => {
   width: 100%;
   padding: var(--space-4);
 
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border-bottom: solid 0.3125rem var(--color-primary);
   box-shadow: var(--shadow-md);
 
@@ -101,7 +183,24 @@ const isActive = (href: string): boolean => {
 
   &__item {
     &--brand {
-      margin-right: auto;
+      // margin-right: auto;
+    }
+  }
+
+  &__item:last-child {
+    display: flex;
+    margin-left: auto;
+    gap: var(--space-4);
+  }
+
+  &__action {
+    transform: scale(1);
+    transition: ease-in .2s;
+    color: var(--color-primary);
+
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: var(--shadow-sm);
     }
   }
 

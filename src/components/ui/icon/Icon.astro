@@ -1,0 +1,35 @@
+---
+import About from './icons/about.svg';
+import Contact from './icons/contact.svg';
+import Github from './icons/github.svg';
+import Home from './icons/home.svg';
+import Linkedin from './icons/linkedin.svg';
+import Projects from './icons/projects.svg';
+import Theme from './icons/theme.svg';
+import World from './icons/world.svg';
+import Email from './icons/email.svg';
+
+const icons = {
+    about: About,
+    contact: Contact,
+    github: Github,
+    home: Home,
+    linkedin: Linkedin,
+    projects: Projects,
+    theme: Theme,
+    world: World,
+    email: Email,
+};
+
+export type IconName = keyof typeof icons;
+
+type Props = {
+    name: IconName;
+    size?: number;
+}
+
+const { name, size = 24 } = Astro.props;
+const Svg = icons[name];
+---
+
+<Svg width={size} height={size} aria-hidden="true" />

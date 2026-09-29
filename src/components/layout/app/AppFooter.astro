@@ -1,0 +1,104 @@
+---
+import Icon from "../../ui/icon/Icon.astro";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <p class="footer__name">Carlos Hernández</p>
+      <p class="footer__role">Desarrollador Full Stack</p>
+    </div>
+
+    <nav class="footer__links" aria-label="Enlaces del pie de página">
+      <a href="https://github.com/hhCarlos" target="_blank" rel="noopener noreferrer">
+         <Icon name="github" size={18} />
+        GitHub
+      </a>
+      <a
+        href="https://linkedin.com/in/carlos-enrique-hernandez-hernandez-65aa5433a"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="linkedin" size={18} />
+        LinkedIn
+      </a>
+      <a href="mailto:hernandez.enrique.carlos@gmail.com">
+        <Icon name="email" size={18} />
+        Correo
+      </a>
+    </nav>
+
+    <p class="footer__copyright">© {year} Carlos Hernández</p>
+  </div>
+</footer>
+
+<style lang="scss">
+  .footer {
+    padding: var(--space-12) var(--page-inline-space) var(--space-8);
+    border-top: var(--border-width-lg) solid var(--color-footer-accent);
+    background-color: var(--color-footer-background);
+    color: var(--color-footer-text);
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-8);
+    max-width: var(--content-width-lg);
+    margin-inline: auto;
+  }
+
+  .footer__name {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .footer__role {
+    margin: var(--space-2) 0 0;
+  }
+
+  .footer__links {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+
+    a {
+      border-bottom: var(--border-width-sm) solid transparent;
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+
+      &:hover {
+        border-color: currentColor;
+      }
+
+      &:focus-visible {
+        outline-color: var(--color-footer-text);
+      }
+    }
+  }
+
+  .footer__copyright {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding-top: var(--space-6);
+    border-top: var(--border-width-sm) solid var(--color-footer-divider);
+    font-size: var(--font-size-sm);
+  }
+
+  @media (max-width: 48rem) {
+    .footer__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .footer__copyright {
+      grid-column: 1;
+    }
+  }
+</style>

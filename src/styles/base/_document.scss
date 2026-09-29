@@ -26,3 +26,12 @@ body {
     scroll-behavior: auto;
   }
 }
+
+.page-container {
+  max-width: var(--content-width-lg);
+  margin-inline: auto;
+  padding:
+    calc(var(--app-header-height) + var(--space-8))
+    var(--page-inline-space)
+    var(--page-block-space);
+}

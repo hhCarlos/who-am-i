@@ -15,6 +15,11 @@
   --color-red-100: hsl(0deg 50% 89.019608%);
   --color-red-50: hsl(0deg 26.666667% 94.117647%);
 
+  --color-footer-background: var(--color-red-800);
+  --color-footer-text: var(--color-white);
+  --color-footer-accent: var(--color-red-900);
+  --color-footer-divider: hsl(0deg 0% 100% / 30%);
+
   /*
    * Neutral palette
    *
@@ -234,6 +239,54 @@
   --opacity-disabled: 0.45;
   --opacity-muted: 0.7;
   --opacity-overlay: 0.65;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-dark-950: hsl(0deg 0% 6%);
+  --color-dark-900: hsl(0deg 0% 10%);
+  --color-dark-800: hsl(0deg 0% 14%);
+  --color-dark-700: hsl(0deg 0% 23%);
+  --color-dark-600: hsl(0deg 0% 32%);
+  --color-dark-red: hsl(0deg 78% 62%);
+
+  --color-primary: var(--color-dark-red);
+  --color-primary-hover: hsl(0deg 80% 72%);
+  --color-primary-active: hsl(0deg 84% 80%);
+  --color-primary-soft: hsl(0deg 30% 13%);
+  --color-primary-muted: hsl(0deg 28% 20%);
+
+  --color-background: var(--color-dark-950);
+  --color-surface: var(--color-dark-900);
+  --color-surface-subtle: hsl(0deg 18% 13%);
+  --color-surface-raised: var(--color-dark-800);
+  --color-surface-inverse: hsl(0deg 0% 96%);
+
+  --color-text: hsl(0deg 0% 96%);
+  --color-text-secondary: hsl(0deg 0% 81%);
+  --color-text-muted: hsl(0deg 0% 65%);
+  --color-text-inverse: var(--color-dark-950);
+  --color-text-accent: var(--color-dark-red);
+
+  --color-border: var(--color-dark-700);
+  --color-border-strong: var(--color-dark-600);
+  --color-border-accent: hsl(0deg 45% 38%);
+
+  --color-focus: var(--color-dark-red);
+  --color-selection: hsl(0deg 42% 30%);
+
+  --shadow-xs: 0 0.0625rem 0.125rem hsl(0deg 0% 0% / 20%);
+  --shadow-sm: 0 0.125rem 0.375rem hsl(0deg 0% 0% / 25%);
+  --shadow-md: 0 0.5rem 1.5rem hsl(0deg 0% 0% / 30%);
+  --shadow-lg: 0 1rem 3rem hsl(0deg 0% 0% / 35%);
+  --shadow-xl: 0 2rem 5rem hsl(0deg 0% 0% / 40%);
+  --shadow-focus: 0 0 0 0.25rem hsl(0deg 78% 62% / 35%);
+
+  --color-footer-background: var(--color-dark-900);
+  --color-footer-text: var(--color-text);
+  --color-footer-accent: var(--color-dark-red);
+  --color-footer-divider: var(--color-dark-700);
 }
 
 /*
