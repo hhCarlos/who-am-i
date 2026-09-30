@@ -2,9 +2,9 @@ name: Build
 
 on:
     push:
-        branches: [main]
+        branches: [develop]
     pull_request:
-        branches: [main]
+        branches: [develop]
 
 permissions:
     contents: read
@@ -22,4 +22,3 @@ jobs:
 
             - run: npm ci
             - run: npm run build
-            
