@@ -1,38 +1,25 @@
-name: CI Pipeline
+name: Build
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
 
 permissions:
-  contents: write
-  id-token: write
+    contents: read
 
 jobs:
-  lint:
-    uses: ./.github/workflows/lint.yml
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
 
-  format:
-    uses: ./.github/workflows/format.yml
+            - uses: actions/setup-node@v4
+              with:
+                node-version: '24'
+                cache: npm
 
-  test:
-    uses: ./.github/workflows/test.yml
-
-  build:
-    uses: ./.github/workflows/build.yml
-    needs: [lint, format, test]
-
-  deploy:
-    if: github.ref == 'refs/heads/develop'
-    uses: ./.github/workflows/deploy.yml
-    needs: [build]
-  
-  deploy-s3:
-    if: github.ref == 'refs/heads/develop'
-    uses: ./.github/workflows/deploy-s3.yml
-    needs: [build]
-    secrets:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            - run: npm ci
+            - run: npm run build
+            
