@@ -12,18 +12,6 @@
       {
         "src": "/images/home/architecture/architecture-one.png",
         "alt": "Diagrama de arquitectura de un proyecto"
-      },
-      {
-        "src": "/images/home/architecture/architecture-one.png",
-        "alt": "Diagrama de arquitectura de un proyecto"
-      },
-      {
-        "src": "/images/home/architecture/architecture-one.png",
-        "alt": "Diagrama de arquitectura de un proyecto"
-      },
-      {
-        "src": "/images/home/architecture/architecture-one.png",
-        "alt": "Diagrama de arquitectura de un proyecto"
       }
     ]
   },
@@ -39,14 +27,6 @@
         {
           "src": "/images/home/frontend/frontend-two.png",
           "alt": ""
-        },
-        {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
-          "alt": ""
-        },
-        {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
-          "alt": ""
         }
     ]
   },
@@ -60,15 +40,11 @@
           "alt": ""
         },
         {
-          "src": "/images/home/backend/backend-one.png",
+          "src": "/images/home/backend/backend-two.png",
           "alt": ""
         },
         {
-          "src": "/images/home/backend/backend-one.png",
-          "alt": ""
-        },
-        {
-          "src": "/images/home/backend/backend-one.png",
+          "src": "/images/home/backend/backend-three.png",
           "alt": ""
         }
     ]
@@ -84,15 +60,11 @@
           "alt": ""
         },
         {
-          "src": "/images/home/persistence/persistence-one.png",
+          "src": "/images/home/persistence/persistence-two.png",
           "alt": ""
         },
         {
-          "src": "/images/home/persistence/persistence-one.png",
-          "alt": ""
-        },
-        {
-          "src": "/images/home/persistence/persistence-one.png",
+          "src": "/images/home/persistence/persistence-three.png",
           "alt": ""
         }
     ]
@@ -103,19 +75,15 @@
     "paragraphTwo": "Esto ayuda a detectar casos límite y a acordar qué debe funcionar antes de dar una funcionalidad por terminada.",
     "images": [
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/testing/test-one.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/testing/test-two.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
-          "alt": ""
-        },
-        {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/testing/test-three.png",
           "alt": ""
         }
     ]
@@ -126,19 +94,15 @@
     "paragraphTwo": "Uso herramientas como Cypress y Playwright según el proyecto, buscando que las pruebas aporten confianza al cambiar el código.",
     "images": [
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/automated-testing/automated-one.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/automated-testing/automated-two.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
-          "alt": ""
-        },
-        {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/automated-testing/automated-three.png",
           "alt": ""
         }
     ]

@@ -28,7 +28,10 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
 </div>
 
 <HomeFeature title={content.architecture.title} reverse>
-  <div slot="visual" class="feature-gallery">
+  <div 
+    slot="visual" 
+    class={`feature-gallery feature-gallery--${Math.min(content.architecture.images.length, 4)}`}
+  >
     {content.architecture.images.map((image: Image) => (
       <img
         class="feature-gallery__image"
@@ -43,7 +46,10 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
 </HomeFeature>
 
 <HomeFeature title={content.frontend.title}>
-  <div slot="visual" class="feature-gallery">
+  <div 
+    slot="visual" 
+    class={`feature-gallery feature-gallery--${Math.min(content.frontend.images.length, 4)}`}
+  >
     {content.frontend.images.map((image: Image) => (
       <img
         class="feature-gallery__image"
@@ -58,7 +64,10 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
 </HomeFeature>
 
 <HomeFeature title={content.backend.title} reverse>
-  <div slot="visual" class="feature-gallery">
+  <div 
+    slot="visual" 
+    class={`feature-gallery feature-gallery--${Math.min(content.backend.images.length, 4)}`}
+  >
     {content.backend.images.map((image: Image) => (
       <img
         class="feature-gallery__image"
@@ -73,7 +82,10 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
 </HomeFeature>
 
 <HomeFeature title={content.persistence.title}>
-  <div slot="visual" class="feature-gallery">
+  <div 
+    slot="visual" 
+    class={`feature-gallery feature-gallery--${Math.min(content.persistence.images.length, 4)}`}
+  >
     {content.persistence.images.map((image: Image) => (
       <img
         class="feature-gallery__image"
@@ -89,7 +101,10 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
 </HomeFeature>
 
 <HomeFeature title={content.testing.title} reverse>
-  <div slot="visual" class="feature-gallery">
+  <div 
+    slot="visual" 
+    class={`feature-gallery feature-gallery--${Math.min(content.testing.images.length, 4)}`}
+  >
     {content.testing.images.map((image: Image) => (
       <img
         class="feature-gallery__image"
@@ -104,7 +119,10 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
 </HomeFeature>
 
 <HomeFeature title={content.automatedTesting.title}>
-  <div slot="visual" class="feature-gallery">
+  <div 
+    slot="visual" 
+    class={`feature-gallery feature-gallery--${Math.min(content.automatedTesting.images.length, 4)}`}
+  >
     {content.automatedTesting.images.map((image: Image) => (
       <img
         class="feature-gallery__image"
@@ -174,24 +192,38 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
       background: var(--color-surface);
       box-shadow: var(--shadow-md);
 
-      &:nth-child(1) {
-        top: 0;
-        left: 5%;
-      }
+      &:nth-child(1) { top: 0; left: 5%; }
+      &:nth-child(2) { top: 12%; right: 2%; }
+      &:nth-child(3) { bottom: 12%; left: 12%; }
+      &:nth-child(4) { right: 10%; bottom: 0; }
+    }
 
-      &:nth-child(2) {
-        top: 12%;
-        right: 2%;
-      }
+    &--1 &__image {
+      inset: 5%;
+      width: 90%;
+      height: 90%;
+    }
 
+    &--2 &__image {
+      top: 15%;
+      bottom: auto;
+      width: 58%;
+      height: 65%;
+
+      &:first-child { left: 0; }
+      &:last-child { left: auto; right: 0; }
+    }
+
+    &--3 &__image {
+      width: 48%;
+      height: 46%;
+
+      &:nth-child(1) { top: 0; left: 0; }
+      &:nth-child(2) { top: 8%; right: 0; left: auto; }
       &:nth-child(3) {
-        bottom: 12%;
-        left: 12%;
-      }
-
-      &:nth-child(4) {
-        right: 10%;
+        top: auto;
         bottom: 0;
+        left: 26%;
       }
     }
   }
@@ -208,6 +240,17 @@ const content: any = Astro.currentLocale === 'es' ? es : en;
         width: 100%;
         height: auto;
         aspect-ratio: 4 / 3;
+      }
+
+      &--1 {
+        grid-template-columns: 1fr;
+      }
+
+      &--1 &__image,
+      &--2 &__image,
+      &--3 &__image {
+        width: 100%;
+        height: auto;
       }
     }
   }

@@ -12,18 +12,6 @@
       {
         "src": "/images/home/architecture/architecture-one.png",
         "alt": "Architecture diagram for a project"
-      },
-      {
-        "src": "/images/home/architecture/architecture-one.png",
-        "alt": "Architecture diagram for a project"
-      },
-      {
-        "src": "/images/home/architecture/architecture-one.png",
-        "alt": "Architecture diagram for a project"
-      },
-      {
-        "src": "/images/home/architecture/architecture-one.png",
-        "alt": "Architecture diagram for a project"
       }
     ]
   },
@@ -32,14 +20,6 @@
     "paragraphOne": "I build responsive web and mobile interfaces with JavaScript and TypeScript, primarily using Angular, Vue, and React Native.",
     "paragraphTwo": "I integrate APIs and pay attention to components, state, and interactions so every screen is useful and easy to maintain.",
     "images": [
-        {
-          "src": "/images/home/frontend/frontend-one.png",
-          "alt": ""
-        },
-        {
-          "src": "/images/home/frontend/frontend-two.png",
-          "alt": ""
-        },
         {
           "src": "/images/home/frontend/frontend-one.png",
           "alt": ""
@@ -60,15 +40,11 @@
           "alt": ""
         },
         {
-          "src": "/images/home/backend/backend-one.png",
+          "src": "/images/home/backend/backend-two.png",
           "alt": ""
         },
         {
-          "src": "/images/home/backend/backend-one.png",
-          "alt": ""
-        },
-        {
-          "src": "/images/home/backend/backend-one.png",
+          "src": "/images/home/backend/backend-three.png",
           "alt": ""
         }
     ]
@@ -84,15 +60,11 @@
           "alt": ""
         },
         {
-          "src": "/images/home/persistence/persistence-one.png",
+          "src": "/images/home/persistence/persistence-two.png",
           "alt": ""
         },
         {
-          "src": "/images/home/persistence/persistence-one.png",
-          "alt": ""
-        },
-        {
-          "src": "/images/home/persistence/persistence-one.png",
+          "src": "/images/home/persistence/persistence-three.png",
           "alt": ""
         }
     ]
@@ -103,19 +75,15 @@
     "paragraphTwo": "This helps identify edge cases and agree on what should work before a feature is considered complete.",
     "images": [
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/testing/test-one.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/testing/test-two.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
-          "alt": ""
-        },
-        {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/testing/test-three.png",
           "alt": ""
         }
     ]
@@ -126,19 +94,15 @@
     "paragraphTwo": "I use tools such as Cypress and Playwright depending on the project, aiming to make tests a reliable source of confidence when changing code.",
     "images": [
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/automated-testing/automated-one.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/automated-testing/automated-two.png",
           "alt": ""
         },
         {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
-          "alt": ""
-        },
-        {
-          "src": "https://board-es.darkorbit.com/attachments/imagen_2026-02-15_190420625-png.12745/",
+          "src": "/images/home/automated-testing/automated-three.png",
           "alt": ""
         }
     ]
